@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penny Juice - Our Products</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFD4A3;
+            border: 3px solid #000;
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            left: 50px;
+            top: 30px;
+            width: 80px;
+            height: 80px;
+            background-color: #FF8C42;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: #fff;
+        }
+
+        .logo-text {
+            position: absolute;
+            left: 60px;
+            top: 120px;
+            font-size: 48px;
+            font-style: italic;
+            color: #8B4513;
+        }
+
+
+        .title {
+            font-size: 56px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            position: absolute;
+            right: 100px;
+            top: 110px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .facebook { background-color: #1877F2; }
+        .twitter { background-color: #1DA1F2; }
+        .instagram { background-color: #E4405F; }
+
+        nav {
+            background-color: transparent;
+            border-top: 3px solid #2D8B2D;
+            border-bottom: 3px solid #2D8B2D;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 100px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-size: 32px;
+            font-weight: normal;
+        }
+
+        nav a.active {
+            font-weight: bold;
+        }
+
+        .products-section {
+            padding: 40px 100px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            text-align: center;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 180px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .product-name {
+            font-size: 32px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .product-input {
+            width: 130px;
+            height: 35px;
+            border: 2px solid #000;
+            background-color: #E8E8E8;
+            margin-bottom: 10px;
+        }
+
+        .cases-label {
+            font-size: 18px;
+        }
+
+        .footer {
+            border-top: 3px solid #2D8B2D;
+            padding: 30px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .footer-left {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-center {
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .payment-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .payment-icon {
+            width: 60px;
+            height: 40px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="Final Logo.png" style="width:133px;height:126px;">
+        <h1 class="title">Penny Juice</h1>
+        <p class="tagline">It Makes Cents</p>
+        <div class="social-icons">
+            <div class="social-icon facebook">f</div>
+            <div class="social-icon twitter">t</div>
+            <div class="social-icon instagram">📷</div>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index">Home</a></li>
+            <li><a href="ourproducts.html">Our Products</a></li>
+            <li><a href="">Flavors</a></li>
+            <li><a href="Order.html"><b>Order</b></a></li>
+            <li><a href="Contact%20Page.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="products-section">
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="AppleJuiceOpt.jpg" alt="Apple Juice" width=115px; height="143px">
+                </div>
+                <div class="product-name">Apple</div>
+                <input type="text" class="product-input">
+                <div class="cases-label"># Of Cases</div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="CherryJuiceOpt.jpg" width=87px; height="143px">
+                    </div>
+                <div class="product-name">Cherry</div>
+                <input type="text" class="product-input">
+                <div class="cases-label"># Of Cases</div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="GrapefruitJuiceOpt.jpg" width=117px; height="143px"></div>
+                <div class="product-name">Grapefruit</div>
+                <input type="text" class="product-input">
+                <div class="cases-label"># Of Cases</div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="GrapeJuiceOpt.jpg" width=117px; height="143px"></div>
+                <div class="product-name">Grape</div>
+                <input type="text" class="product-input">
+                <div class="cases-label"># Of Cases</div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="MangoJuice-Opt.jpg" width=117px; height="143px"></div>
+                <div class="product-name">Mango</div>
+                <input type="text" class="product-input">
+                <div class="cases-label"># Of Cases</div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                <img src="OrangeJuiceOpt.jpg" width=117px; height="143px"></div>
+                <div class="product-name">Orange</div>
+                <input type="text" class="product-input">
+                <div class="cases-label"># Of Cases</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-left">
+            <div>Penny Juice of America</div>
+            <div>915 40th Ave Bettendorf, IA 52722</div>
+            <div>pennyjuice@hotmail.com</div>
+            <div>Phone: 563-386-1999</div>
+            <div>Fax: 563-386-6200</div>
+        </div>
+        <div class="footer-center">
+            Copywrite Penny Juice 2025
+        </div>
+        <div class="payment-icons">
+            <img src="Payment%20Icons.png" width=117px; height="143px">
+        </div>
+    </div>
+</body>
+</html>

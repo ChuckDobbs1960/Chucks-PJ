@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penny Juice - It Makes Cents</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5c894;
+            border: 15px solid #5a9f5a;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid white;
+        }
+
+        .logo-text {
+            font-size: 60px;
+            color: #f5c894;
+            font-style: italic;
+        }
+
+        .title-section {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .title-section h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .title-section p {
+            font-size: 24px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .facebook {
+            background-color: #3b5998;
+        }
+
+        .twitter {
+            background-color: #1da1f2;
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+
+        nav {
+            background-color: transparent;
+            border-top: 4px solid #5a9f5a;
+            border-bottom: 4px solid #5a9f5a;
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav ul li a.active {
+            text-decoration: underline;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .fruit-image {
+            width: 500px;
+            height: 180px;
+            background-color: #e0e0e0;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #ccc;
+        }
+
+        .tagline {
+            font-size: 18px;
+            text-decoration: underline;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .description {
+            text-align: left;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+        .description p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .features {
+            text-align: left;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        footer {
+            border-top: 4px solid #5a9f5a;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 40px;
+        }
+
+        .company-info {
+            text-align: left;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .copyright {
+            text-align: center;
+            flex-grow: 1;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .payment-icons {
+            display: flex;
+            gap: 5px;
+        }
+
+        .payment-icon {
+            width: 60px;
+            height: 40px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="Final Logo.png" style="width:133px;height:139px;">
+            <div class="title-section">
+                <h1>Penny Juice</h1>
+                <p>It Makes Cents</p>
+            </div>
+            <div class="social-icons">
+                <div class="social-icon facebook">f</div>
+                <div class="social-icon twitter">t</div>
+                <div class="social-icon instagram">📷</div>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ourproducts.html"><B>Our Products</B></a></li>
+                <li><a href="#flavors">Flavors</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="Contact%20Page.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <img src="Fruit.png" style="width:369px;height:139px;">
+            <br>
+            <p class="tagline">Premium Quality 100% Fruit Juice Concentrate. No Sugar Added. Non Refrigerated.</p>
+            
+            <div class="description">
+                <p>Get delicious and nutritious 100% fruit juice from Penny Juice of America. We provide 100% blended fruit juice concentrates that are specially made for kids and meet all the requirements of the FDA with regard to subsidy and nutrition. Customers prefer our products for their benefits, features, variety, service, and competitive pricing. These blended fruit juice concentrates are for all childcare centers and preschools. Penny Juice of America uses only the highest quality fruit juice products.</p>
+                
+                <p>Kids love penny juice concentrates because it's available in various exciting flavors and colors. Each case contains six half-gallon bottles of different flavors.</p>
+            </div>
+
+            <div class="features">
+                <p>No contracts<br>
+                Free delivery nationwide<br>
+                Minimum order 1 case</p>
+            </div>
+        </div>
+
+        <footer>
+            <div class="company-info">
+                <p><strong>Penny Juice of America</strong><br>
+                915 40th Ave Bettendorf, IA 52722<br>
+                pennyjuice@hotmail.com<br>
+                Phone: 563-386-1999<br>
+                Fax: 563-386-62000</p>
+            </div>
+            <div class="copyright">
+                <p>Copywrite Penny Juice 2025</p>
+            </div>
+            <div class="payment-icons">
+                <div class="payment-icon">VISA</div>
+                <div class="payment-icon">MC</div>
+                <div class="payment-icon">DISC</div>
+                <div class="payment-icon">PP</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
