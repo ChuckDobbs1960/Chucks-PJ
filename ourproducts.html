@@ -15,13 +15,17 @@
             font-family: Arial, sans-serif;
             background-color: #f5c894;
             border: 15px solid #5a9f5a;
-            min-height: 100vh;
+            min-height: 121vh;
         }
 
         .container {
-            max-width: 1400px;
-            margin: 0 auto;
+            max-width: calc(100% - 30px);
+            height: calc(117vh - 30px);
+            margin: 15px;
             padding: 20px;
+            border: 3px solid #000;
+            background-color: #F5C998;
+            box-sizing: border-box;
         }
 
         header {
@@ -84,43 +88,38 @@
             font-size: 24px;
         }
 
-        .facebook {
-            background-color: #3b5998;
-        }
-
-        .twitter {
-            background-color: #1da1f2;
-        }
-
-        .instagram {
-            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-        }
-
         nav {
-            background-color: transparent;
-            border-top: 4px solid #5a9f5a;
-            border-bottom: 4px solid #5a9f5a;
-            margin-bottom: 30px;
+            margin: 20px 0;
+        }
+
+        .nav-bar-top {
+            height: 6px;
+            background-color: #228B22;
+            margin-bottom: 2px;
+        }
+
+        .nav-bar-bottom {
+            height: 6px;
+            background-color: #228B22;
+            margin-top: 2px;
         }
 
         nav ul {
-            list-style: none;
             display: flex;
             justify-content: space-around;
-            padding: 15px 0;
+            list-style: none;
+            padding: 10px 0;
+            background-color: #F5C998;
         }
 
-        nav ul li a {
-            text-decoration: none;
-            color: black;
-            font-size: 28px;
+        nav ul li {
+            font-size: 18px;
             font-weight: bold;
         }
 
-        nav ul li a.active {
-            text-decoration: underline;
+        nav ul li.active {
+            font-weight: bold;
         }
-
         .content {
             text-align: center;
         }
@@ -211,20 +210,22 @@
                 <p>It Makes Cents</p>
             </div>
             <div class="social-icons">
-                <div class="social-icon facebook">f</div>
-                <div class="social-icon twitter">t</div>
-                <div class="social-icon instagram">📷</div>
+                <img src="F.png" alt="Facebook">
+                <img src="T.png" alt="Twitter">
+                <img src="i.png" alt="Instagram">
             </div>
         </header>
 
         <nav>
+              <div class="nav-bar-top"></div>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="ourproducts.html"><B>Our Products</B></a></li>
-                <li><a href="#flavors">Flavors</a></li>
-                <li><a href="#order">Order</a></li>
-                <li><a href="Contact%20Page.html">Contact Us</a></li>
+                <li><a href="ourproducts.html"><b>Our Products</b></a></li>
+                <li><a href="Testimonials.html">Testimonials</a></li>
+                <li><a href="Order.html">Order</a></li>
+                <li><a href="Contact Page.html">Contact Us</a></li>
             </ul>
+            <div class="nav-bar-bottom"></div>
         </nav>
 
         <div class="content">
@@ -239,9 +240,9 @@
             </div>
 
             <div class="features">
-                <p>No contracts<br>
-                Free delivery nationwide<br>
-                Minimum order 1 case</p>
+                <p><b>No contracts</b><br>
+                <b>Free delivery nationwide</b><br>
+                <b>Minimum order 1 case</b></p>
             </div>
         </div>
 
@@ -256,11 +257,7 @@
             <div class="copyright">
                 <p>Copywrite Penny Juice 2025</p>
             </div>
-            <div class="payment-icons">
-                <div class="payment-icon">VISA</div>
-                <div class="payment-icon">MC</div>
-                <div class="payment-icon">DISC</div>
-                <div class="payment-icon">PP</div>
+            <img src="Payment Icons.png">   
             </div>
         </footer>
     </div>
