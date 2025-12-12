@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penny Juice - It Makes Cents</title>
+    <title>Penny Juice - Home</title>
     <style>
         * {
             margin: 0;
@@ -13,289 +13,371 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #F4C27F;
-            padding: 20px;
+            background-color: #f5c894;
+            border: 15px solid #5a9f5a;
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            border: 3px solid #000;
+            max-width: calc(100% - 30px);
+            height: calc(100vh - -243px);
+            margin: 16px;
             padding: 20px;
-            background-color: #F4C27F;
+            border: 3px solid #000;
+            background-color: #F5C998;
+            box-sizing: border-box;
         }
 
-        header {
+        .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            padding: 5px 0;
         }
 
         .logo {
-            width: 80px;
-            height: 80px;
-            background-color: #F4C27F;
-            border: 3px solid #FFF;
-            border-radius: 50%;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            color: red;
-            font-weight: bold;
-            font-size: 10px;
-            text-align: center;
-            position: relative;
+            width: 150px;
         }
 
-        .logo::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: 
-                linear-gradient(0deg, transparent 48%, #FFF 48%, #FFF 52%, transparent 52%),
-                linear-gradient(45deg, transparent 48%, #FFF 48%, #FFF 52%, transparent 52%),
-                linear-gradient(90deg, transparent 48%, #FFF 48%, #FFF 52%, transparent 52%),
-                linear-gradient(135deg, transparent 48%, #FFF 48%, #FFF 52%, transparent 52%);
-            border-radius: 50%;
+        .logo img {
+            width: 80px;
+            height: auto;
         }
 
-        .penny {
-            font-family: 'Brush Script MT', cursive;
-            font-size: 48px;
-            color: #8B4513;
-        }
-
-        .title-section {
+        .brand {
             text-align: center;
             flex-grow: 1;
         }
 
-        .title-section h1 {
-            font-size: 48px;
+        .brand h1 {
+            font-size: 52px;
             margin-bottom: 5px;
+            font-weight: bold;
         }
 
-        .title-section p {
-            font-size: 24px;
+        .brand p {
+            font-size: 22px;
         }
 
         .social-icons {
             display: flex;
-            gap: 5px;
+            gap: 3px;
+            width: 150px;
+            justify-content: flex-end;
+
         }
 
-        .social-icon {
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: red;
-            font-weight: bold;
-            font-size: 10px;
-            text-align: center;
-        }
-
-        .social-icon.facebook {
-            background-color: #1877F2;
-        }
-
-        .social-icon.twitter {
-            background-color: #1DA1F2;
-        }
-
-        .social-icon.instagram {
-            background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF);
+        .social-icons img {
+            width: 48px;
+            height: 48px;
         }
 
         nav {
-            background-color: #F4C27F;
-            border-top: 4px solid #32CD32;
-            border-bottom: 4px solid #32CD32;
-            margin-bottom: 20px;
+            margin: 15px 0 0 0;
+        }
+
+        .nav-bar-top {
+            height: 5px;
+            background-color: #228B22;
+            margin-bottom: 0px;
+        }
+
+        .nav-bar-bottom {
+            height: 4px;
+            background-color: #228B22;
+            margin-top: 0px;
         }
 
         nav ul {
             display: flex;
             justify-content: space-around;
             list-style: none;
-            padding: 10px 0;
+            padding: 8px 0;
+            background-color: #F5C998;
+            margin: 0;
         }
 
-        nav ul li a {
+        nav ul li {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+            nav ul li a {
             text-decoration: none;
             color: #000;
-            font-size: 24px;
-            font-weight: bold;
+        }
+
+
+        .slider-container {
+            position: relative;
+            max-width: 100%;
+            margin: 30px 0;
+            overflow: hidden;
+            background-color: #000;
         }
 
         .slider {
-            background-color: #E8E8E8;
-            border: 3px solid #000;
-            padding: 60px;
-            text-align: center;
-            font-size: 48px;
-            font-weight: bold;
-            margin-bottom: 20px;
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
             position: relative;
-            overflow: hidden;
         }
 
-        .slider::before {
-            content: '';
+        .slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .slide-caption {
             position: absolute;
+            bottom: 0;
             left: 0;
-            top: 0;
-            width: 40%;
-            height: 100%;
-            border-right: 3px solid #000;
-            background: linear-gradient(to right, #F4C27F 0%, #E8E8E8 100%);
-            clip-path: polygon(0 0, 100% 50%, 0 100%);
-        }
-
-        .slider::after {
-            content: '';
-            position: absolute;
             right: 0;
-            top: 0;
-            width: 40%;
-            height: 100%;
-            border-left: 3px solid #000;
-            background: linear-gradient(to left, #F4C27F 0%, #E8E8E8 100%);
-            clip-path: polygon(100% 0, 0 50%, 100% 100%);
-        }
-
-        .content {
-            margin-bottom: 20px;
-        }
-
-        .content h2 {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .content p {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
             text-align: center;
             font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 15px;
         }
 
-        .divider {
-            height: 4px;
-            background-color: #32CD32;
+        .slide-caption a {
+            color: #F5C998;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .slider-nav:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .slider-dots {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #F5C998;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #999;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #228B22;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 36px;
+            margin: 30px 0;
+        }
+
+        .story-content {
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.8;
             margin: 20px 0;
         }
 
-        footer {
+        .story-content p {
+            margin-bottom: 20px;
+        }
+        .bottom-line {
+            height: 2px;
+            background-color: #6BB6D6;
+            margin: 45px 45px 0 0;
+        }
+
+        .footer {
+            border-top: 4px solid #228B22;
+            margin-top: 0px;
+            padding-top: 15px;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            margin-top: 20px;
         }
 
-        .footer-left {
-            font-size: 14px;
+        .footer-info {
+            font-size: 11px;
             line-height: 1.5;
         }
 
-        .footer-center {
+        .copyright {
             text-align: center;
-            font-size: 18px;
+            font-size: 16px;
+            font-weight: bold;
         }
 
         .payment-icons {
             display: flex;
             gap: 5px;
+            align-items: right;
         }
 
-        .payment-icon {
-            width: 60px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: red;
-            font-weight: bold;
-            font-size: 8px;
-            text-align: center;
-            border-radius: 5px;
-        }
-
-        .payment-icon.visa {
-            background-color: #1A1F71;
-        }
-
-        .payment-icon.mastercard {
-            background: linear-gradient(to right, #EB001B 50%, #F79E1B 50%);
-        }
-
-        .payment-icon.discover {
-            background: linear-gradient(to right, #000 50%, #FF6000 50%);
-        }
-
-        .payment-icon.paypal {
-            background-color: #003087;
+        .payment-icons img {
+            height: 42px;
+            width: auto;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <img src="Final Logo.png" style="width:133px;height:139px;">
-            <div class="title-section">
+        <div class="header">
+            <div class="logo">
+                <img src="Final%20Logo.png" alt="Penny Juice Logo">
+            </div>
+            
+            <div class="brand">
                 <h1>Penny Juice</h1>
                 <p>It Makes Cents</p>
             </div>
+            
             <div class="social-icons">
-                <img src="F.png">
-                <img src="T.png">
-                <img src="i.png">
+                <img src="F.png" alt="Facebook">
+                <img src="T.png" alt="Twitter">
+                <img src="i.png" alt="Instagram">
             </div>
-        </header>
+        </div>
 
         <nav>
+            
+             <div class="nav-bar-top"></div>
             <ul>
                 <li><a href="index.html"><b>Home</b></a></li>
                 <li><a href="ourproducts.html">Our Products</a></li>
-                <li><a href="#flavors">Flavors</a></li>
-                <li><a href="#order">Order</a></li>
-                <li><a href="Contact%20Page.html">Contact Us</a></li>
+                <li><a href="Testimonials.html">Testimonials</a></li>
+                <li><a href="Order.html">Order</a></li>
+                <li><a href="Contact Page.html">Contact Us</a></li>
             </ul>
+            <div class="nav-bar-bottom"></div>
+            
         </nav>
 
-
-
-        <div class="content">
-            <h2>Our Story</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla</p>
-            <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation</p>
+        <div class="slider-container">
+            <button class="slider-nav prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="slider-nav next" onclick="changeSlide(1)">&#10095;</button>
+            
+            <div class="slider" id="slider">
+                <div class="slide">
+                    <img src="Slider-4.jpg" alt="Slide 1">
+                    <div class="slide-caption">
+                        Check out our products - <a href="ourproducts.html" target="_blank">Learn More</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="Slider-1.jpg" alt="Slide 2">
+                    <div class="slide-caption">
+                        What are our customers saying? - <a href="Testimonials.html" target="_blank">Learn More</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="Slider-2-1.jpg" alt="Slide 3">
+                    <div class="slide-caption">
+                        Placing you order is fast and easy. - <a href="Order.html" target="_blank">Learn More</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="Slider-3.jpg" alt="Slide 4">
+                    <div class="slide-caption">
+                        Have a question? Contact us. - <a href="Contact Page.html" target="_blank">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-dots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+                <span class="dot" onclick="goToSlide(3)"></span>
+            </div>
         </div>
 
-        <div class="divider"></div>
+        <h2 class="page-title">Our Story</h2>
 
-        <footer>
-            <div class="footer-left">
-                <p><strong>Penny Juice of America</strong></p>
-                <p>915 40th Ave Bettendorf, IA 52722</p>
-                <p>pennyjuice@hotmail.com</p>
-                <p>Phone: 563-386-1999</p>
-                <p>Fax: 563-386-62000</p>
+        <div class="story-content">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla</p>
+
+            <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation</p>
+        </div>
+    <div class="bottom-line"></div>
+        <div class="footer">
+            <div class="footer-info">
+                <strong>Penny Juice of America</strong><br>
+                915 40th Ave Bettendorf, IA 52722<br>
+                pennyjuice@hotmail.com<br>
+                Phone: 563-386-1999<br>
+                Fax: 563-386-62000
             </div>
-            <div class="footer-center">
-                <p><strong>Copywrite Penny Juice 2025</strong></p>
-            </div>
-            <img src="Payment Icons.png">
-        </footer>
+            <div class="copyright"></div>
+                <b>Copywrite Penny Juice 2025</b>
+            <img src="Payment Icons.png">                
+        </div>
     </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const slider = document.getElementById('slider');
+        
+        function showSlide(n) {
+            if (n >= slides.length) currentSlide = 0;
+            if (n < 0) currentSlide = slides.length - 1;
+            
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+        
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+        
+        function goToSlide(n) {
+            currentSlide = n;
+            showSlide(currentSlide);
+        }
+        
+        // Auto-advance slider every 5 seconds
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+    </script>
 </body>
 </html>
